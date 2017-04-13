@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B2B263C-0F31-4DBE-AE67-6A932F77B1AA}</ProjectGuid>
+    <ProjectGuid>{312EF1FD-BB6F-48F3-B5C5-824E773A284D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Euler_001</RootNamespace>
-    <AssemblyName>Euler_001</AssemblyName>
+    <RootNamespace>ProjectEuler</RootNamespace>
+    <AssemblyName>ProjectEuler</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Euler003.cs" />
+    <Compile Include="Euler001.cs" />
+    <Compile Include="Euler002.cs" />
+    <Compile Include="Support\GenPrimes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
