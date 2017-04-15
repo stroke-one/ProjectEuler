@@ -5,19 +5,14 @@
 
         public byte[] GetPrimes(long maxPrimeNumber)
         {
-            var primes = new byte[maxPrimeNumber];
+            var primes = new byte[maxPrimeNumber + 1];
 
-            for (int i = 0; i < maxPrimeNumber; i++)
-            {
-                primes[i] = 0;
-            }
-
-            for (int i = 2; i < maxPrimeNumber; i++)
+            for (long i = 2; i < maxPrimeNumber; i++)
             {
                 if (primes[i] == 0)
                 {
                     primes[i] = 1;
-                    for (int j = 2; j < (maxPrimeNumber / i); j++)
+                    for (long j = 2; j <= (maxPrimeNumber / i); j++)
                     {
                         primes[i * j] = 2;
                     }
@@ -25,6 +20,7 @@
             }
             return (primes);
         }
+
 
         public bool IsPrime(long testValue)
         {
