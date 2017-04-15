@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Diagnostics;
 
 namespace ProjectEuler
 {
@@ -21,6 +21,7 @@ namespace ProjectEuler
 
             Euler010 euler010 = new Euler010(2000000);
             Console.WriteLine(string.Format("Euler010\t{0}", (euler010.Solve())));
+
         }
     }
 }

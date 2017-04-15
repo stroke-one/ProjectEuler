@@ -3,18 +3,21 @@
     public class GenPrimes
     {
 
-        public byte[] GetPrimes(long maxPrimeNumber)
+        public bool[] GetPrimes(long maxPrimeNumber)
         {
-            var primes = new byte[maxPrimeNumber + 1];
+            // for performance the default all false filled array is used
+            // and non-primes are set to true during the sieve
+            // this results in tests for prime being logically backwards
+
+            bool[] primes = new bool[maxPrimeNumber + 1];
 
             for (long i = 2; i < maxPrimeNumber; i++)
             {
-                if (primes[i] == 0)
+                if (primes[i] == false)
                 {
-                    primes[i] = 1;
                     for (long j = 2; j <= (maxPrimeNumber / i); j++)
                     {
-                        primes[i * j] = 2;
+                        primes[i * j] = true;
                     }
                 }
             }
