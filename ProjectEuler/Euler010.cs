@@ -14,11 +14,11 @@ namespace ProjectEuler
         public long Solve()
         {
             GenPrimes prime_library = new GenPrimes();
-            byte[] primes = prime_library.GetPrimes(this.maxValue);
+            bool[] primes = prime_library.GetPrimes(this.maxValue);
             long result = 0;
             for(long i=0; i < this.maxValue; i++)
             {
-                if (primes[i] == 1)
+                if (primes[i] == false)
                 {
                     result += i;
                 }
