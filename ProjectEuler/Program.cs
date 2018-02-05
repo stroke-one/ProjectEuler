@@ -16,6 +16,9 @@ namespace ProjectEuler
             Euler003 euler003 = new Euler003(600851475143);
             Console.WriteLine(string.Format("Euler003\t{0}", (euler003.Solve())));
 
+            Euler004 euler004 = new Euler004();
+            Console.WriteLine(string.Format("Euler004\t{0}", (euler004.Solve())));
+
             Euler007 euler007 = new Euler007(10001);
             Console.WriteLine(string.Format("Euler007\t{0}", (euler007.Solve())));
 
